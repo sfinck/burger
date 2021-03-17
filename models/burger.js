@@ -1,5 +1,15 @@
-const orm = require('..config/orm.js')
+const orm = require('../config/orm.js')
 
-//* Inside `burger.js`, import `orm.js` into `burger.js`
-//Also inside `burger.js`, create the code that will call the ORM functions using burger specific input for the ORM.
-//Export at the end of the `burger.js` file
+const burger = {
+    all(cb) {
+      orm.all('burger', (res) => cb(res));
+    },
+    create(cols, vals, cb) {
+      orm.create('burger', cols, vals, (res) => cb(res));
+    },
+    update(objColVals, condition, cb) {
+      orm.update('burger', objColVals, condition, (res) => cb(res));
+    },
+  };
+
+module.exports = burger;

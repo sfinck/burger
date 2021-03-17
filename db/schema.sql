@@ -10,9 +10,9 @@ USE burgers_db;
 -- Created the table "burgers"
 CREATE TABLE burgers (
   id int AUTO_INCREMENT NOT NULL,
-  name varchar(30) NOT NULL,
+  burger_name varchar(30) NOT NULL,
+  devoured boolean,
   PRIMARY KEY(id)
 );
 
-     * **burger_name**: a string.
-     * **devoured**: a boolean.
+
