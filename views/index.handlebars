@@ -1,8 +1,8 @@
 <div class="input-group">
-    <input type="text" class="form-control" placeholder="Enter your burger here"
+    <input type="text" class="form-control" placeholder="Enter your burger here" id="burger-name"
         aria-label="Burger input box with add and devour buttons">
     <button class="btn btn-outline-secondary" type="button" id="add-burger-button">Add Burger</button>
-    <button class="btn btn-outline-secondary" type="button" id="devour-button">Devour it!</button>
+
 </div>
 
 <div class="container">
@@ -13,7 +13,7 @@
             <div class="card" style="width: 100%;">
                 <div class="card-body">
                     <h5 class="card-title">{{burger_name}}</h5>
-                    <a href="#" class="btn btn-primary" data-id={{id}}>Devour it!</a>
+                    <a href="#" class="devour-btn btn btn-primary" data-id={{id}}>Devour it!</a>
                 </div>
             </div>
             {{/unless}}
